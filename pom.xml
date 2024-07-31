@@ -137,12 +137,13 @@
                 </executions>
             </plugin>
 
-<!--            SonarQube for -->
+            <!--            SonarQube for -->
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
                 <version>3.12.0.333</version>
             </plugin>
+
         </plugins>
     </build>
 
