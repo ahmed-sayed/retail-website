@@ -6,5 +6,5 @@ public enum ProductType {
     FURNITURE,
     GROCERIES,
     HEALTH_AND_BEAUTY,
-    BABY_PRODUCTS;
+    BABY_PRODUCTS
 }

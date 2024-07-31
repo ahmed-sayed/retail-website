@@ -21,9 +21,8 @@ public class Bill {
         calculateTotal();
     }
 
-    public double calculateTotal() {
+    public void calculateTotal() {
         totalAmount = products.stream().mapToDouble(Product::getPrice).sum();
-        return totalAmount;
     }
 
     public double applyDiscount(User user) {
