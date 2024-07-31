@@ -6,6 +6,7 @@ import com.example.retailwebsite.model.Bill;
 import com.example.retailwebsite.model.Product;
 import com.example.retailwebsite.model.User;
 import com.example.retailwebsite.service.impl.BillCalculatorService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,6 +15,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @SpringBootApplication
+@Slf4j
 public class RetailWebsiteApplication implements CommandLineRunner {
 
     public static void main(String[] args) {
@@ -44,7 +46,7 @@ public class RetailWebsiteApplication implements CommandLineRunner {
 
     private void calculateNetPayableAmount(BillCalculatorService billCalculatorService, Bill bill, User user) {
         double netPayableAmount = billCalculatorService.calculateNetPayableAmount(bill, user);
-        System.out.println("Net Payable Amount: $" + netPayableAmount);
+        log.info("Net Payable Amount: ${}", netPayableAmount);
     }
 
     private List<Product> getDummyProductsList() {
